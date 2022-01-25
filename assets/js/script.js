@@ -28,4 +28,51 @@ var handleFormSubmit = function (event) {
   dateInputEl.val('');
 };
 
+ ```js
+  // Autocomplete widget
+  $(function () {
+    var skillNames = [
+      'Bootstrap',
+      'C',
+      'C++',
+      'CSS',
+      'Express.js',
+      'Git',
+      'HTML',
+      'Java',
+      'JavaScript',
+      'jQuery',
+      'JSON',
+      'MySQL',
+      'Node.js',
+      'NoSQL',
+      'PHP',
+      'Python',
+      'React',
+      'Ruby',
+    ];
+    $('#skill-name').autocomplete({
+      source: skillNames,
+    });
+  });
+  ```
+
+* In your terminal, add and commit the changes:
+
+  ```bash
+  git add -A
+  git commit -m 'added Autocomplete widget'
+  ```
+
+* Repeat for the `Datepicker` widget:
+
+  ```js
+  // Datepicker widget
+  $(function () {
+    $('#datepicker').datepicker({
+      changeMonth: true,
+      changeYear: true,
+    });
+  });
+
 formEl.on('submit', handleFormSubmit);
